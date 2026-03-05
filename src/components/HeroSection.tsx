@@ -1,11 +1,11 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
 
 const WA = "5562982414338";
 
 const HeroSection = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="Clínica Palato" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/70" />
@@ -31,14 +31,13 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent("Olá! Gostaria de agendar uma avaliação na Palato Odontologia.")}`}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={() => openExternal(getWhatsAppUrl(WA, "Olá! Gostaria de agendar uma avaliação na Palato Odontologia."))}
             className="gold-gradient px-10 py-4 text-primary-foreground font-semibold text-sm tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
           >
             Agende sua Avaliação
-          </a>
+          </button>
           <a
             href="#sobre"
             className="px-10 py-4 border border-primary-foreground/30 text-primary-foreground font-medium text-sm tracking-[0.1em] uppercase hover:bg-primary-foreground/10 transition-colors"

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
 
 const navItems = [
   { label: "Início", href: "#inicio" },
@@ -13,6 +14,11 @@ const WA = "5562982414338";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleBook = () => {
+    openExternal(getWhatsAppUrl(WA, "Olá! Gostaria de agendar uma consulta na Palato Odontologia."));
+    setIsOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/50">
@@ -31,14 +37,13 @@ const Header = () => {
               {item.label}
             </a>
           ))}
-          <a
-            href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent("Olá! Gostaria de agendar uma consulta na Palato Odontologia.")}`}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={handleBook}
             className="px-6 py-2.5 gold-gradient text-primary-foreground text-xs font-semibold tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
           >
             Agendar Consulta
-          </a>
+          </button>
         </nav>
 
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-foreground">
@@ -58,14 +63,13 @@ const Header = () => {
               {item.label}
             </a>
           ))}
-          <a
-            href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent("Olá! Gostaria de agendar uma consulta na Palato Odontologia.")}`}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={handleBook}
             className="px-6 py-3 gold-gradient text-primary-foreground text-sm font-semibold text-center tracking-wider uppercase"
           >
             Agendar Consulta
-          </a>
+          </button>
         </nav>
       )}
     </header>

@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
 
 const WA = "5562982414338";
 
@@ -25,12 +26,11 @@ const SpecialtiesSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {specialties.map((s, i) => (
-            <a
+            <button
               key={s.title}
-              href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre ${s.title} na Palato Odontologia.`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group glass-card p-8 hover:border-primary/30 transition-all duration-300"
+              type="button"
+              onClick={() => openExternal(getWhatsAppUrl(WA, `Olá! Gostaria de saber mais sobre ${s.title} na Palato Odontologia.`))}
+              className="group glass-card p-8 hover:border-primary/30 transition-all duration-300 text-left"
             >
               <span className="text-xs text-muted-foreground font-mono">0{i + 1}</span>
               <h3 className="font-heading text-xl font-light text-foreground mt-4 group-hover:text-primary transition-colors">
@@ -43,7 +43,7 @@ const SpecialtiesSection = () => {
                 <span className="text-xs font-medium tracking-wider uppercase">Saiba Mais</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
-            </a>
+            </button>
           ))}
         </div>
       </div>
