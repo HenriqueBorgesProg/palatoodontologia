@@ -32,9 +32,7 @@ const HeroSection = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href={`https://wa.me/${WA}?text=${encodeURIComponent("Olá! Gostaria de agendar uma avaliação na Palato Odontologia.")}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent("Olá! Gostaria de agendar uma avaliação na Palato Odontologia.")}`}
             className="gold-gradient px-10 py-4 text-primary-foreground font-semibold text-sm tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
           >
             Agende sua Avaliação
