@@ -1,5 +1,5 @@
 import { MapPin, Phone, Clock } from "lucide-react";
-import { getWhatsAppUrl, GOOGLE_MAPS_URL, openExternal } from "@/lib/externalNavigation";
+import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
 
 const WA = "5562982414338";
 
@@ -12,19 +12,15 @@ const FooterSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light text-primary-foreground leading-tight mt-4">Encontre-nos</h2>
         </div>
 
-        <div className="w-full border border-primary-foreground/10 mb-16 p-8 md:p-10 bg-primary-foreground/5">
-          <p className="text-primary-foreground/70 text-sm font-light text-center max-w-2xl mx-auto">
-            Estamos no Edifício Metropolitano em Goiânia. Clique no botão abaixo para abrir a localização diretamente no Google Maps.
-          </p>
-          <div className="flex justify-center mt-6">
-            <button
-              type="button"
-              onClick={() => openExternal(GOOGLE_MAPS_URL)}
-              className="px-8 py-3 gold-gradient text-primary-foreground text-xs font-semibold tracking-[0.1em] uppercase"
-            >
-              Abrir no Google Maps
-            </button>
-          </div>
+        <div className="w-full mb-16">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.8!2d-49.27!3d-16.69!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sEdif%C3%ADcio+Metropolitano+Goi%C3%A2nia!5e0!3m2!1spt-BR!2sbr!4v1"
+            title="Localização Palato Odontologia"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-[350px] md:h-[400px] border border-primary-foreground/10"
+          />
         </div>
 
         <div className="grid md:grid-cols-3 gap-12">

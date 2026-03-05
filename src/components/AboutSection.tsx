@@ -1,5 +1,4 @@
-import { Users, Microscope, Award, MapPin, PlayCircle } from "lucide-react";
-import { openExternal, YOUTUBE_VIDEO_URL } from "@/lib/externalNavigation";
+import { Users, Microscope, Award, MapPin } from "lucide-react";
 
 const stats = [
   { value: "20+", label: "Anos de Experiência" },
@@ -51,21 +50,15 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="lg:sticky lg:top-28 border border-border p-8 md:p-10 bg-secondary/30">
-            <div className="flex justify-center mb-5">
-              <PlayCircle className="w-14 h-14 text-primary" />
-            </div>
-            <p className="text-center text-muted-foreground text-sm md:text-base leading-relaxed font-light">
-              Para máxima compatibilidade em Firefox e Vivaldi, o vídeo de apresentação abre direto no YouTube em nova aba segura.
-            </p>
-            <div className="flex justify-center mt-6">
-              <button
-                type="button"
-                onClick={() => openExternal(YOUTUBE_VIDEO_URL)}
-                className="px-8 py-3 gold-gradient text-primary-foreground text-xs font-semibold tracking-[0.1em] uppercase"
-              >
-                Assistir no YouTube
-              </button>
+          <div className="lg:sticky lg:top-28">
+            <div className="aspect-video w-full">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
+                title="Palato Odontologia - Apresentação"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full border border-border"
+              />
             </div>
           </div>
         </div>
