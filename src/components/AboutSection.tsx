@@ -1,15 +1,17 @@
+import { Users, Microscope, Sparkles, MapPin, Award } from "lucide-react";
+
 const stats = [
   { value: "20+", label: "Anos de Experiência" },
   { value: "15+", label: "Especialidades" },
-  { value: "1000+", label: "Pacientes Felizes" },
+  { value: "1000+", label: "Pacientes Atendidos" },
 ];
 
 const highlights = [
-  { icon: "👨‍⚕️", title: "Equipe Multidisciplinar Especializada", description: "Dentistas especializados em diferentes áreas da odontologia." },
-  { icon: "🔬", title: "Tecnologia de Ponta", description: "Avançadas tecnologias de diagnóstico e tratamento." },
-  { icon: "✨", title: "Harmonização do Sorriso", description: "Procedimentos cosméticos para melhorar a harmonia facial." },
-  { icon: "📍", title: "Localização Premium", description: "Torre premium em área de prestígio em Goiânia." },
-  { icon: "🏆", title: "Odontologia de Alto Padrão", description: "Comprometimento com qualidade e excelência." },
+  { icon: Users, title: "Equipe Multidisciplinar", description: "Dentistas especializados em diferentes áreas da odontologia." },
+  { icon: Microscope, title: "Tecnologia de Ponta", description: "Avançadas tecnologias de diagnóstico e tratamento." },
+  { icon: Sparkles, title: "Harmonização do Sorriso", description: "Procedimentos cosméticos para melhorar a harmonia facial." },
+  { icon: MapPin, title: "Localização Premium", description: "Edifício Metropolitano, área de prestígio em Goiânia." },
+  { icon: Award, title: "Alto Padrão", description: "Comprometimento com qualidade e excelência em cada procedimento." },
 ];
 
 const AboutSection = () => {
@@ -22,7 +24,6 @@ const AboutSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Text + highlights */}
           <div>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               A Palato Odontologia está há quase duas décadas no mercado como uma renomada clínica odontológica em Goiânia. A abertura da nossa nova clínica, agora localizada no prestigiado Edifício Metropolitano, é um reflexo tangível da nossa contínua dedicação e compromisso. Planejamos cuidadosamente cada detalhe para oferecer a excelência em serviços odontológicos que você merece.
@@ -37,10 +38,12 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               {highlights.map((item) => (
                 <div key={item.title} className="flex items-start gap-4 p-3 rounded-lg hover:bg-secondary/50 transition-colors">
-                  <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
                   <div>
                     <h3 className="font-semibold text-foreground">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
@@ -50,7 +53,6 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* YouTube Video */}
           <div className="lg:sticky lg:top-28">
             <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-border/50">
               <iframe
