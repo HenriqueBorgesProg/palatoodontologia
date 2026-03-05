@@ -29,9 +29,7 @@ const TreatmentsSection = () => {
           {treatments.map((t) => (
             <a
               key={t.title}
-              href={`https://wa.me/${WA}?text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre ${t.title} na Palato Odontologia.`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre ${t.title} na Palato Odontologia.`)}`}
               className="group bg-background p-8 flex flex-col justify-between min-h-[220px] hover:bg-card transition-colors"
             >
               <div>

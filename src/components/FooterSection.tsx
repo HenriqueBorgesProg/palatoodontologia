@@ -14,11 +14,10 @@ const FooterSection = () => {
         {/* Google Maps */}
         <div className="w-full h-[400px] border border-primary-foreground/10 mb-16 overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.8!2d-49.2648!3d-16.6869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef11d4d3b5b3d%3A0x3e3b3b3b3b3b3b3b!2sEdif%C3%ADcio%20Metropolitano%20-%20Goi%C3%A2nia%20-%20GO!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps?q=Edif%C3%ADcio%20Metropolitano%2C%20Goi%C3%A2nia%20GO&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
-            allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Localização Palato Odontologia"
@@ -39,7 +38,7 @@ const FooterSection = () => {
               <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-gold" />
               <span className="font-light">Edifício Metropolitano, Goiânia - GO</span>
             </div>
-            <a href={`https://wa.me/${WA}?text=${encodeURIComponent("Olá! Gostaria de entrar em contato com a Palato Odontologia.")}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-primary-foreground/70 text-sm hover:text-gold transition-colors">
+            <a href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent("Olá! Gostaria de entrar em contato com a Palato Odontologia.")}`} className="flex items-center gap-3 text-primary-foreground/70 text-sm hover:text-gold transition-colors">
               <Phone className="w-4 h-4 flex-shrink-0 text-gold" />
               <span className="font-light">(62) 9 8241-4338</span>
             </a>

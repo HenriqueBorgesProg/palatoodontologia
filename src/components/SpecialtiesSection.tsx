@@ -27,9 +27,7 @@ const SpecialtiesSection = () => {
           {specialties.map((s, i) => (
             <a
               key={s.title}
-              href={`https://wa.me/${WA}?text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre ${s.title} na Palato Odontologia.`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre ${s.title} na Palato Odontologia.`)}`}
               className="group glass-card p-8 hover:border-primary/30 transition-all duration-300"
             >
               <span className="text-xs text-muted-foreground font-mono">0{i + 1}</span>
