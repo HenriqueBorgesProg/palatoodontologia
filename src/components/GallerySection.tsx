@@ -9,23 +9,20 @@ const images = [
 
 const GallerySection = () => {
   return (
-    <section className="py-20 md:py-32 bg-secondary/30">
+    <section className="py-24 md:py-36 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="section-label">Clínica Odontológica em Goiânia</span>
-          <h2 className="section-title mt-3">Galeria de Imagens</h2>
+        <div className="text-center mb-20">
+          <span className="section-label">Nossa Estrutura</span>
+          <h2 className="section-title mt-4">Galeria</h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
           {images.map((src, i) => (
-            <div
-              key={i}
-              className="aspect-square rounded-xl overflow-hidden group cursor-pointer"
-            >
+            <div key={i} className="aspect-square overflow-hidden group cursor-pointer">
               <img
                 src={src}
                 alt={`Palato Odontologia - Foto ${i + 1}`}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0"
                 loading="lazy"
               />
             </div>
