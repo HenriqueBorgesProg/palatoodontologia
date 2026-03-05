@@ -1,53 +1,57 @@
-import heroBg from "@/assets/hero-bg.jpg";
+const WA = "5562982414338";
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <img src={heroBg} alt="Clínica Palato" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-terracotta-dark/80 via-terracotta-dark/60 to-terracotta-dark/80" />
-      </div>
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `linear-gradient(hsl(var(--gold)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--gold)) 1px, transparent 1px)`,
+        backgroundSize: '60px 60px'
+      }} />
+      
+      {/* Radial glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-10"
+        style={{ background: 'radial-gradient(circle, hsl(var(--gold)) 0%, transparent 70%)' }} />
 
-      {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
-        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-gold/40 bg-gold/10 mb-8">
-          <span className="text-gold-light text-sm font-medium tracking-wide">
-            ✦ Quase duas décadas de excelência
+        <div className="inline-flex items-center gap-3 mb-10">
+          <div className="w-12 h-px bg-primary" />
+          <span className="text-xs font-medium tracking-[0.3em] uppercase text-primary">
+            Quase duas décadas de excelência
           </span>
+          <div className="w-12 h-px bg-primary" />
         </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-cream leading-tight mb-6">
-          Excelência em Odontologia de Alto Padrão
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-light text-foreground leading-[0.95] mb-8">
+          Odontologia de
+          <br />
+          <span className="gold-text font-medium italic">Alto Padrão</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-cream/80 mb-10 max-w-2xl mx-auto font-light">
-          Transformando sorrisos em Goiânia com tecnologia de ponta e cuidado personalizado
+        <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-xl mx-auto font-light leading-relaxed">
+          Tecnologia de ponta e cuidado personalizado em Goiânia
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://wa.me/5562999999999"
+            href={`https://wa.me/${WA}?text=${encodeURIComponent("Olá! Gostaria de agendar uma avaliação na Palato Odontologia.")}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="gold-gradient px-8 py-4 rounded-full text-accent-foreground font-semibold text-base hover:opacity-90 transition-opacity shadow-xl"
+            className="gold-gradient px-10 py-4 text-primary-foreground font-semibold text-sm tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
           >
-            Agende sua Avaliação →
+            Agende sua Avaliação
           </a>
           <a
             href="#sobre"
-            className="px-8 py-4 rounded-full border-2 border-cream/30 text-cream font-semibold text-base hover:bg-cream/10 transition-colors"
+            className="px-10 py-4 border border-border text-foreground font-medium text-sm tracking-[0.1em] uppercase hover:border-primary hover:text-primary transition-colors"
           >
             Conheça a Clínica
           </a>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-cream/40 flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-cream/60 rounded-full" />
-        </div>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <div className="w-px h-16 bg-gradient-to-b from-transparent via-primary to-transparent opacity-40" />
       </div>
     </section>
   );

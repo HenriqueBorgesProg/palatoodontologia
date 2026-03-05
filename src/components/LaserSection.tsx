@@ -1,43 +1,47 @@
+const WA = "5562982414338";
+
+const benefits = [
+  "Tratamentos mais rápidos e indolores",
+  "Minimamente invasivo",
+  "Diversos procedimentos sem anestesia",
+  "Sem o clássico barulho de dentista",
+  "O melhor laser para todas as especialidades",
+];
+
 const LaserSection = () => {
   return (
-    <section className="py-20 md:py-32 terracotta-gradient text-cream">
+    <section className="py-24 md:py-36 bg-background border-y border-border">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-light">
-              Inovação na Odontologia
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold leading-tight mt-3 text-cream">
-              Laser LiteTouch Odontológico
+            <span className="section-label">Inovação</span>
+            <h2 className="section-title mt-4">
+              Laser LiteTouch
+              <br />
+              <span className="gold-text italic">Odontológico</span>
             </h2>
-            <p className="text-lg text-cream/80 mt-6 leading-relaxed">
+            <p className="text-muted-foreground mt-6 leading-relaxed font-light">
               A Palato Odontologia inova mais uma vez e traz para Goiânia o Laser LiteTouch, a melhor tecnologia a laser do mundo.
             </p>
-            <ul className="mt-8 space-y-4">
-              {[
-                "Tratamentos mais rápidos e indolores",
-                "Minimamente invasivo",
-                "Diversos procedimentos sem anestesia",
-                "Sem o clássico barulho de dentista",
-                "O melhor laser para todas as especialidades",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-gold flex-shrink-0" />
-                  <span className="text-cream/90">{item}</span>
+            <ul className="mt-10 space-y-4">
+              {benefits.map((item) => (
+                <li key={item} className="flex items-center gap-4">
+                  <div className="w-1.5 h-1.5 bg-primary flex-shrink-0" />
+                  <span className="text-sm text-foreground/80 font-light">{item}</span>
                 </li>
               ))}
             </ul>
             <a
-              href="https://www.palatoodontologia.com.br/laser-litetouch"
+              href={`https://wa.me/${WA}?text=${encodeURIComponent("Olá! Gostaria de saber mais sobre o tratamento com Laser LiteTouch na Palato Odontologia.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-10 px-8 py-4 rounded-full gold-gradient text-accent-foreground font-semibold hover:opacity-90 transition-opacity shadow-xl"
+              className="inline-block mt-10 px-10 py-4 gold-gradient text-primary-foreground font-semibold text-sm tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
             >
-              Saiba Mais →
+              Saiba Mais
             </a>
           </div>
 
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <div className="border border-border overflow-hidden">
             <img
               src="/images/laser-litetouch.jpeg"
               alt="Laser LiteTouch"

@@ -1,43 +1,48 @@
+import { ArrowUpRight } from "lucide-react";
+
+const WA = "5562982414338";
+
 const specialties = [
-  { title: "Buco-Maxilo e Ortognática", image: "https://www.palatoodontologia.com.br/upload/service/Q0N9h99WMMG0jDN6J5J7FFpB4PUDfOn1Kwo7Ar2x.png", link: "https://www.palatoodontologia.com.br/buco-maxilo-e-ortognatica", description: "Cirurgias corretivas faciais e procedimentos buco-maxilares." },
-  { title: "Odontopediatria", image: "https://www.palatoodontologia.com.br/upload/service/31lxZCoFgp6PRqIb7iJ8tf8dW9cu0zRFnmu1Ocv2.png", link: "https://www.palatoodontologia.com.br/odontopediatria", description: "Cuidados odontológicos especializados para crianças." },
-  { title: "Periodontia", image: "https://www.palatoodontologia.com.br/upload/service/OfR3LibJF1qUVai5Q4wdas9HtSBgfKH3kIQZ3N70.png", link: "https://www.palatoodontologia.com.br/periodontia", description: "Tratamento de gengivas e tecidos de suporte dos dentes." },
-  { title: "Ortodontia e Ortopedia Facial", image: "https://www.palatoodontologia.com.br/upload/service/64u3K3xjbXLLPGTgGOi5XybsMOYZeLOeIy6Flwen.png", link: "https://www.palatoodontologia.com.br/ortodontia-e-ortopedia-facial", description: "Alinhamento dentário e correção de problemas esqueléticos." },
-  { title: "Prótese", image: "https://www.palatoodontologia.com.br/upload/service/XgGRIQXTFuxV9jAsliorHsYUJmvMNvsj6eSkER89.png", link: "https://www.palatoodontologia.com.br/protese", description: "Reabilitação oral com próteses fixas e removíveis." },
-  { title: "Dentística", image: "https://www.palatoodontologia.com.br/upload/service/1mM3HKrBxhksv75QiGdUiEAJGM6b49pGEXOxoSAy.jpeg", link: "https://www.palatoodontologia.com.br/dentistica", description: "Restaurações estéticas e funcionais dos dentes." },
+  { title: "Buco-Maxilo e Ortognática", description: "Cirurgias corretivas faciais e procedimentos buco-maxilares." },
+  { title: "Odontopediatria", description: "Cuidados odontológicos especializados para crianças." },
+  { title: "Periodontia", description: "Tratamento de gengivas e tecidos de suporte dos dentes." },
+  { title: "Ortodontia e Ortopedia Facial", description: "Alinhamento dentário e correção de problemas esqueléticos." },
+  { title: "Prótese", description: "Reabilitação oral com próteses fixas e removíveis." },
+  { title: "Dentística", description: "Restaurações estéticas e funcionais dos dentes." },
 ];
 
 const SpecialtiesSection = () => {
   return (
-    <section id="especialidades" className="py-20 md:py-32 bg-background">
+    <section id="especialidades" className="py-24 md:py-36 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="section-label">Clínica Odontológica em Goiânia</span>
-          <h2 className="section-title mt-3">Especialidades Odontológicas</h2>
-          <p className="section-subtitle mx-auto mt-4">
-            Nossas especialidades abrangem desde ortodontia de última geração até procedimentos cirúrgicos avançados.
+        <div className="text-center mb-20">
+          <span className="section-label">Áreas de Atuação</span>
+          <h2 className="section-title mt-4">Especialidades Odontológicas</h2>
+          <p className="section-subtitle mx-auto mt-5">
+            Equipe multidisciplinar com especialistas em diversas áreas.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {specialties.map((s) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {specialties.map((s, i) => (
             <a
               key={s.title}
-              href={s.link}
+              href={`https://wa.me/${WA}?text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre ${s.title} na Palato Odontologia.`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group glass-card p-8 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group border border-border p-8 hover:border-primary/30 transition-all duration-300"
             >
-              <div className="w-20 h-20 rounded-xl bg-primary/5 border border-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/10 transition-colors">
-                <img src={s.image} alt={s.title} className="w-12 h-12 object-contain" loading="lazy" />
-              </div>
-              <h3 className="font-heading font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
+              <span className="text-xs text-muted-foreground font-mono">0{i + 1}</span>
+              <h3 className="font-heading text-xl font-light text-foreground mt-4 group-hover:text-primary transition-colors">
                 {s.title}
               </h3>
-              <p className="text-sm text-muted-foreground mt-2">{s.description}</p>
-              <span className="mt-4 text-sm font-semibold text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                Saiba Mais →
-              </span>
+              <p className="text-sm text-muted-foreground mt-3 font-light leading-relaxed">
+                {s.description}
+              </p>
+              <div className="flex items-center gap-2 mt-6 text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-xs font-medium tracking-wider uppercase">Saiba Mais</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </div>
             </a>
           ))}
         </div>
