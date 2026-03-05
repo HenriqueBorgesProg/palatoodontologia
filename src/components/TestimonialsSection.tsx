@@ -19,7 +19,7 @@ const TestimonialsSection = () => {
           <div className="flex items-center justify-center gap-3 mt-5">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                <Star key={i} className="w-4 h-4 fill-accent text-accent" />
               ))}
             </div>
             <span className="text-sm font-medium text-foreground">5.0</span>
@@ -27,12 +27,12 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t) => (
-            <div key={t.name} className="bg-background p-8 flex flex-col">
+            <div key={t.name} className="glass-card p-8 flex flex-col">
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 fill-primary text-primary" />
+                  <Star key={i} className="w-3 h-3 fill-accent text-accent" />
                 ))}
               </div>
               <p className="text-muted-foreground flex-1 text-sm leading-relaxed font-light">
@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
               </p>
               <div className="mt-6 pt-6 border-t border-border flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 border border-primary/30 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                     <span className="text-xs font-medium text-primary">{t.name.charAt(0)}</span>
                   </div>
                   <span className="text-sm text-foreground">{t.name}</span>

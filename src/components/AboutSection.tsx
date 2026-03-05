@@ -53,11 +53,13 @@ const AboutSection = () => {
           <div className="lg:sticky lg:top-28">
             <div className="aspect-video overflow-hidden border border-border">
               <iframe
-                src="https://www.youtube.com/embed/Vth3vuHQyO0"
+                src="https://www.youtube-nocookie.com/embed/Vth3vuHQyO0"
                 title="Conheça a Palato Odontologia"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
+                referrerPolicy="no-referrer"
+                sandbox="allow-scripts allow-same-origin allow-presentation"
               />
             </div>
             <p className="text-center text-xs text-muted-foreground mt-4 tracking-wider uppercase">

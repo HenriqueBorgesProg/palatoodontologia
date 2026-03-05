@@ -30,7 +30,7 @@ const SpecialtiesSection = () => {
               href={`https://wa.me/${WA}?text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre ${s.title} na Palato Odontologia.`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group border border-border p-8 hover:border-primary/30 transition-all duration-300"
+              className="group glass-card p-8 hover:border-primary/30 transition-all duration-300"
             >
               <span className="text-xs text-muted-foreground font-mono">0{i + 1}</span>
               <h3 className="font-heading text-xl font-light text-foreground mt-4 group-hover:text-primary transition-colors">

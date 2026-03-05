@@ -10,24 +10,24 @@ const benefits = [
 
 const LaserSection = () => {
   return (
-    <section className="py-24 md:py-36 bg-background border-y border-border">
+    <section className="py-24 md:py-36 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="section-label">Inovação</span>
-            <h2 className="section-title mt-4">
+            <span className="text-xs font-body font-semibold uppercase tracking-[0.3em] text-gold-light">Inovação</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light leading-tight mt-4 text-primary-foreground">
               Laser LiteTouch
               <br />
-              <span className="gold-text italic">Odontológico</span>
+              <span className="italic text-gold-light">Odontológico</span>
             </h2>
-            <p className="text-muted-foreground mt-6 leading-relaxed font-light">
+            <p className="text-primary-foreground/70 mt-6 leading-relaxed font-light">
               A Palato Odontologia inova mais uma vez e traz para Goiânia o Laser LiteTouch, a melhor tecnologia a laser do mundo.
             </p>
             <ul className="mt-10 space-y-4">
               {benefits.map((item) => (
                 <li key={item} className="flex items-center gap-4">
-                  <div className="w-1.5 h-1.5 bg-primary flex-shrink-0" />
-                  <span className="text-sm text-foreground/80 font-light">{item}</span>
+                  <div className="w-1.5 h-1.5 bg-gold flex-shrink-0" />
+                  <span className="text-sm text-primary-foreground/80 font-light">{item}</span>
                 </li>
               ))}
             </ul>
@@ -41,7 +41,7 @@ const LaserSection = () => {
             </a>
           </div>
 
-          <div className="border border-border overflow-hidden">
+          <div className="border border-primary-foreground/10 overflow-hidden">
             <img
               src="/images/laser-litetouch.jpeg"
               alt="Laser LiteTouch"
