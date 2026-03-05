@@ -62,7 +62,15 @@ const AboutSection = () => {
               />
             </div>
             <p className="text-center text-xs text-muted-foreground mt-4 tracking-wider uppercase">
-              Conheça nossa estrutura
+              Conheça nossa estrutura •
+              <a
+                href="https://www.youtube.com/watch?v=Vth3vuHQyO0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 text-primary hover:text-accent transition-colors"
+              >
+                Abrir no YouTube
+              </a>
             </p>
           </div>
         </div>
