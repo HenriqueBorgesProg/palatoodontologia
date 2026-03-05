@@ -1,6 +1,6 @@
-export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/39B6f7x9Yx1RZsW26";
+export const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Palato+Odontologia";
 
-export const YOUTUBE_VIDEO_URL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+export const YOUTUBE_VIDEO_URL = "https://www.youtube.com/";
 
 export const getWhatsAppUrl = (phone: string, message: string) => {
   const normalizedPhone = phone.replace(/\D/g, "");
