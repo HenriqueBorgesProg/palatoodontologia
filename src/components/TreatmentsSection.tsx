@@ -15,7 +15,7 @@ const treatments = [
 
 const TreatmentsSection = () => {
   return (
-    <section id="tratamentos" className="py-24 md:py-36 bg-secondary/30">
+    <section id="tratamentos" className="py-24 md:py-36 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <span className="section-label">Nossos Tratamentos</span>
@@ -32,7 +32,7 @@ const TreatmentsSection = () => {
               href={`https://wa.me/${WA}?text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre ${t.title} na Palato Odontologia.`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-background p-8 flex flex-col justify-between min-h-[220px] hover:bg-secondary/80 transition-colors"
+              className="group bg-background p-8 flex flex-col justify-between min-h-[220px] hover:bg-card transition-colors"
             >
               <div>
                 <h3 className="font-heading text-xl font-light text-foreground group-hover:text-primary transition-colors leading-tight">

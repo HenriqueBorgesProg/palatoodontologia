@@ -15,10 +15,10 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-4 flex items-center justify-between h-20">
         <a href="#inicio">
-          <img src="/images/logo.png" alt="Palato Odontologia" className="h-12 md:h-14 brightness-200" />
+          <img src="/images/logo.png" alt="Palato Odontologia" className="h-12 md:h-14" />
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
@@ -35,7 +35,7 @@ const Header = () => {
             href={`https://wa.me/${WA}?text=${encodeURIComponent("Olá! Gostaria de agendar uma consulta na Palato Odontologia.")}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2.5 gold-gradient rounded-none text-primary-foreground text-xs font-semibold tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
+            className="px-6 py-2.5 gold-gradient text-primary-foreground text-xs font-semibold tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
           >
             Agendar Consulta
           </a>
