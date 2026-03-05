@@ -33,6 +33,8 @@ const Header = () => {
           ))}
           <a
             href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent("Olá! Gostaria de agendar uma consulta na Palato Odontologia.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-2.5 gold-gradient text-primary-foreground text-xs font-semibold tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
           >
             Agendar Consulta
@@ -58,6 +60,8 @@ const Header = () => {
           ))}
           <a
             href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent("Olá! Gostaria de agendar uma consulta na Palato Odontologia.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-3 gold-gradient text-primary-foreground text-sm font-semibold text-center tracking-wider uppercase"
           >
             Agendar Consulta

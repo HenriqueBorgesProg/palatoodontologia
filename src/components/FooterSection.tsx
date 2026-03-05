@@ -12,16 +12,20 @@ const FooterSection = () => {
         </div>
 
         {/* Google Maps */}
-        <div className="w-full h-[400px] border border-primary-foreground/10 mb-16 overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps?q=Edif%C3%ADcio%20Metropolitano%2C%20Goi%C3%A2nia%20GO&output=embed"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Localização Palato Odontologia"
-          />
+        <div className="w-full border border-primary-foreground/10 mb-16 p-8 md:p-10 bg-primary-foreground/5">
+          <p className="text-primary-foreground/70 text-sm font-light text-center max-w-2xl mx-auto">
+            Estamos no Edifício Metropolitano em Goiânia. Clique no botão abaixo para abrir a localização diretamente no Google Maps.
+          </p>
+          <div className="flex justify-center mt-6">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Edif%C3%ADcio+Metropolitano+Goi%C3%A2nia+GO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 gold-gradient text-primary-foreground text-xs font-semibold tracking-[0.1em] uppercase"
+            >
+              Abrir no Google Maps
+            </a>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12">
@@ -38,7 +42,7 @@ const FooterSection = () => {
               <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-gold" />
               <span className="font-light">Edifício Metropolitano, Goiânia - GO</span>
             </div>
-            <a href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent("Olá! Gostaria de entrar em contato com a Palato Odontologia.")}`} className="flex items-center gap-3 text-primary-foreground/70 text-sm hover:text-gold transition-colors">
+            <a href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent("Olá! Gostaria de entrar em contato com a Palato Odontologia.")}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-primary-foreground/70 text-sm hover:text-gold transition-colors">
               <Phone className="w-4 h-4 flex-shrink-0 text-gold" />
               <span className="font-light">(62) 9 8241-4338</span>
             </a>
