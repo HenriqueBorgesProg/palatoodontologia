@@ -1,3 +1,5 @@
+import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
+
 const WA = "5562982414338";
 
 const benefits = [
@@ -31,14 +33,13 @@ const LaserSection = () => {
                 </li>
               ))}
             </ul>
-            <a
-              href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent("Olá! Gostaria de saber mais sobre o tratamento com Laser LiteTouch na Palato Odontologia.")}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => openExternal(getWhatsAppUrl(WA, "Olá! Gostaria de saber mais sobre o tratamento com Laser LiteTouch na Palato Odontologia."))}
               className="inline-block mt-10 px-10 py-4 gold-gradient text-primary-foreground font-semibold text-sm tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
             >
               Saiba Mais
-            </a>
+            </button>
           </div>
 
           <div className="border border-primary-foreground/10 overflow-hidden">

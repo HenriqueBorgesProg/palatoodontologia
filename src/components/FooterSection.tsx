@@ -1,4 +1,5 @@
 import { MapPin, Phone, Clock } from "lucide-react";
+import { getWhatsAppUrl, GOOGLE_MAPS_URL, openExternal } from "@/lib/externalNavigation";
 
 const WA = "5562982414338";
 
@@ -11,20 +12,18 @@ const FooterSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light text-primary-foreground leading-tight mt-4">Encontre-nos</h2>
         </div>
 
-        {/* Google Maps */}
         <div className="w-full border border-primary-foreground/10 mb-16 p-8 md:p-10 bg-primary-foreground/5">
           <p className="text-primary-foreground/70 text-sm font-light text-center max-w-2xl mx-auto">
             Estamos no Edifício Metropolitano em Goiânia. Clique no botão abaixo para abrir a localização diretamente no Google Maps.
           </p>
           <div className="flex justify-center mt-6">
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Edif%C3%ADcio+Metropolitano+Goi%C3%A2nia+GO"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => openExternal(GOOGLE_MAPS_URL)}
               className="px-8 py-3 gold-gradient text-primary-foreground text-xs font-semibold tracking-[0.1em] uppercase"
             >
               Abrir no Google Maps
-            </a>
+            </button>
           </div>
         </div>
 
@@ -42,10 +41,14 @@ const FooterSection = () => {
               <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-gold" />
               <span className="font-light">Edifício Metropolitano, Goiânia - GO</span>
             </div>
-            <a href={`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent("Olá! Gostaria de entrar em contato com a Palato Odontologia.")}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-primary-foreground/70 text-sm hover:text-gold transition-colors">
+            <button
+              type="button"
+              onClick={() => openExternal(getWhatsAppUrl(WA, "Olá! Gostaria de entrar em contato com a Palato Odontologia."))}
+              className="flex items-center gap-3 text-primary-foreground/70 text-sm hover:text-gold transition-colors"
+            >
               <Phone className="w-4 h-4 flex-shrink-0 text-gold" />
               <span className="font-light">(62) 9 8241-4338</span>
-            </a>
+            </button>
             <div className="flex items-center gap-3 text-primary-foreground/70 text-sm">
               <Clock className="w-4 h-4 flex-shrink-0 text-gold" />
               <span className="font-light">Seg - Sex: 8h às 18h</span>
