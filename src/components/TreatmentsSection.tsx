@@ -1,20 +1,66 @@
-import { ArrowUpRight } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
 
 const WA = "5562982414338";
 
 const treatments = [
+  { title: "Airflow", description: "Tecnologia moderna para limpeza dental profunda, eficaz e confortável." },
+  { title: "Alinhadores", description: "Ortodontia invisível para alinhar seus dentes com discrição e conforto." },
+  { title: "Aparelho Fixo", description: "Tratamento ortodôntico tradicional para correção do posicionamento dental." },
+  { title: "Clareamento Dental", description: "Procedimento estético para deixar seus dentes mais brancos e brilhantes." },
+  { title: "Facetas de Resina", description: "Solução estética acessível para corrigir imperfeições e transformar o sorriso." },
+  { title: "Lentes de Contato Dental", description: "Lâminas ultrafinas de porcelana para um sorriso perfeito e natural." },
   { title: "Remoção de Lentes com Laser", description: "Feixe de luz para remover lentes de contato dentárias com alta precisão." },
-  { title: "Profilaxia", description: "Procedimentos para prevenir cáries, gengivite e periodontite." },
+  { title: "Remoção de Cárie com Laser", description: "Tratamento minimamente invasivo para remoção de cárie sem dor." },
+  { title: "Implantes Dentários", description: "Implantes de alta qualidade para restaurar dentes perdidos com naturalidade." },
+  { title: "Profilaxia", description: "Limpeza profissional para prevenir cáries, gengivite e periodontite." },
   { title: "Tratamento DTM", description: "Tratamento da articulação temporomandibular e seus distúrbios." },
   { title: "Tratamento Apneia", description: "Tratamento para apneia do sono e distúrbios respiratórios." },
+  { title: "Tratamento com Laser", description: "Abordagem minimamente invasiva com tecnologia laser de ponta." },
+  { title: "Gengivoplastia", description: "Remodelação gengival para um sorriso mais harmônico e equilibrado." },
   { title: "Palato Beauty", description: "Procedimentos estéticos para um sorriso saudável e harmonioso." },
-  { title: "Airflow", description: "Tecnologia moderna para limpeza dental profunda e eficaz." },
-  { title: "Tratamento com Laser", description: "Abordagem minimamente invasiva com tecnologia laser." },
-  { title: "Implantes Dentários", description: "Implantes de alta qualidade para restaurar seu sorriso." },
+  { title: "Prótese Dentária", description: "Soluções para restauração e substituição de dentes perdidos ou danificados." },
 ];
 
+const ITEMS_PER_PAGE_DESKTOP = 4;
+const ITEMS_PER_PAGE_MOBILE = 1;
+const AUTO_PLAY_INTERVAL = 5000;
+
 const TreatmentsSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  const itemsPerPage = isMobile ? ITEMS_PER_PAGE_MOBILE : ITEMS_PER_PAGE_DESKTOP;
+  const totalPages = Math.ceil(treatments.length / itemsPerPage);
+
+  const next = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % totalPages);
+  }, [totalPages]);
+
+  const prev = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
+  }, [totalPages]);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(next, AUTO_PLAY_INTERVAL);
+    return () => clearInterval(timer);
+  }, [next, isPaused]);
+
+  const visibleTreatments = treatments.slice(
+    currentIndex * itemsPerPage,
+    currentIndex * itemsPerPage + itemsPerPage
+  );
+
   return (
     <section id="tratamentos" className="py-24 md:py-36 bg-secondary/50">
       <div className="container mx-auto px-4">
@@ -26,25 +72,73 @@ const TreatmentsSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
-          {treatments.map((t) => (
+        <div
+          className="relative"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {/* Navigation Arrows */}
+          <button
+            onClick={prev}
+            className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-background border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+            aria-label="Anterior"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={next}
+            className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-background border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+            aria-label="Próximo"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          {/* Cards Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border mx-6 md:mx-8">
+            {visibleTreatments.map((t) => (
+              <button
+                key={t.title}
+                type="button"
+                onClick={() =>
+                  openExternal(
+                    getWhatsAppUrl(
+                      WA,
+                      `Olá! Gostaria de saber mais sobre ${t.title} na Palato Odontologia.`
+                    )
+                  )
+                }
+                className="group bg-background p-8 flex flex-col justify-between min-h-[220px] hover:bg-card transition-colors text-left"
+              >
+                <div>
+                  <h3 className="font-heading text-xl font-light text-foreground group-hover:text-primary transition-colors leading-tight">
+                    {t.title}
+                  </h3>
+                  <p className="text-xs text-muted-foreground mt-3 leading-relaxed font-light">
+                    {t.description}
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 mt-6 text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-xs font-medium tracking-wider uppercase">Saiba Mais</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Dots Indicator */}
+        <div className="flex justify-center gap-2 mt-8">
+          {Array.from({ length: totalPages }).map((_, i) => (
             <button
-              key={t.title}
-              type="button"
-              onClick={() => openExternal(getWhatsAppUrl(WA, `Olá! Gostaria de saber mais sobre ${t.title} na Palato Odontologia.`))}
-              className="group bg-background p-8 flex flex-col justify-between min-h-[220px] hover:bg-card transition-colors text-left"
-            >
-              <div>
-                <h3 className="font-heading text-xl font-light text-foreground group-hover:text-primary transition-colors leading-tight">
-                  {t.title}
-                </h3>
-                <p className="text-xs text-muted-foreground mt-3 leading-relaxed font-light">{t.description}</p>
-              </div>
-              <div className="flex items-center gap-2 mt-6 text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="text-xs font-medium tracking-wider uppercase">Saiba Mais</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </div>
-            </button>
+              key={i}
+              onClick={() => setCurrentIndex(i)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                i === currentIndex
+                  ? "bg-primary w-6"
+                  : "bg-border hover:bg-muted-foreground"
+              }`}
+              aria-label={`Página ${i + 1}`}
+            />
           ))}
         </div>
       </div>
