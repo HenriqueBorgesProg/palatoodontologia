@@ -14,7 +14,7 @@ const FooterSection = () => {
 
         <div className="w-full mb-16">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.8!2d-49.27!3d-16.69!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sEdif%C3%ADcio+Metropolitano+Goi%C3%A2nia!5e0!3m2!1spt-BR!2sbr!4v1"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.5!2d-49.2659!3d-16.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef11c1a8a7c5d%3A0x1234567890abcdef!2sEdif%C3%ADcio%20Metropolitano!5e0!3m2!1spt-BR!2sbr!4v1"
             title="Localização Palato Odontologia"
             allowFullScreen
             loading="lazy"

@@ -53,7 +53,7 @@ const AboutSection = () => {
           <div className="lg:sticky lg:top-28">
             <div className="aspect-video w-full">
               <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
+                src="https://www.youtube.com/embed/Vth3vuHQyO0"
                 title="Palato Odontologia - Apresentação"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
