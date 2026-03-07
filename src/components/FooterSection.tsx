@@ -14,7 +14,7 @@ const FooterSection = () => {
 
         <div className="w-full mb-16">
           <iframe
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Edif%C3%ADcio+Metropolitano,+Av+T-1,+Setor+Bueno,+Goi%C3%A2nia,+GO,+Brazil&zoom=16"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Edif%C3%ADcio+Metropolitan,+Av.+Dep.+Jamel+Cec%C3%ADlio+2690,+Jardim+Goi%C3%A1s,+Goi%C3%A2nia,+GO,+74810-100,+Brazil&zoom=16"
             title="Localização Palato Odontologia"
             allowFullScreen
             loading="lazy"
@@ -35,7 +35,7 @@ const FooterSection = () => {
             <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-primary-foreground mb-6">Contato</h3>
             <div className="flex items-start gap-3 text-primary-foreground/70 text-sm">
               <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-gold" />
-              <span className="font-light">Edifício Metropolitano, Goiânia - GO</span>
+              <span className="font-light">Av. Dep. Jamel Cecílio, 2690 - Jardim Goiás, Goiânia - GO</span>
             </div>
             <button
               type="button"
