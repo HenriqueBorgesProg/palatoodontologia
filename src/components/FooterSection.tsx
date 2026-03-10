@@ -1,7 +1,7 @@
 import { MapPin, Phone, Clock } from "lucide-react";
 import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
 
-const WA = "5562982414338";
+const WA = "556299693125";
 
 const FooterSection = () => {
   return (
