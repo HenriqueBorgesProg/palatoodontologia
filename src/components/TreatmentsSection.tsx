@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
 
-const WA = "5562982414338";
+const WA = "556299693125";
 
 const treatments = [
   { title: "Airflow", description: "Tecnologia moderna para limpeza dental profunda, eficaz e confortável." },

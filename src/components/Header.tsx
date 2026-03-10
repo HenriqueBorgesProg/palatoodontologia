@@ -10,7 +10,7 @@ const navItems = [
   { label: "Contato", href: "#contato" },
 ];
 
-const WA = "5562982414338";
+const WA = "556299693125";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

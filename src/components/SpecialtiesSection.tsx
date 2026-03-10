@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
 
-const WA = "5562982414338";
+const WA = "556299693125";
 
 const specialties = [
   { title: "Buco-Maxilo e Ortognática", description: "Cirurgias corretivas faciais e procedimentos buco-maxilares." },

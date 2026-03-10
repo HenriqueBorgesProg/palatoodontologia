@@ -1,6 +1,6 @@
 import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
 
-const WA = "5562982414338";
+const WA = "556299693125";
 
 const benefits = [
   "Tratamentos mais rápidos e indolores",
