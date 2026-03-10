@@ -43,7 +43,7 @@ const FooterSection = () => {
               className="flex items-center gap-3 text-primary-foreground/70 text-sm hover:text-gold transition-colors"
             >
               <Phone className="w-4 h-4 flex-shrink-0 text-gold" />
-              <span className="font-light">(62) 9 8241-4338</span>
+              <span className="font-light">(62) 9 9969-3125</span>
             </button>
             <div className="flex items-center gap-3 text-primary-foreground/70 text-sm">
               <Clock className="w-4 h-4 flex-shrink-0 text-gold" />
