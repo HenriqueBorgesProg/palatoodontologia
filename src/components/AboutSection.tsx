@@ -2,7 +2,7 @@ import { Users, Microscope, Award, MapPin } from "lucide-react";
 
 const stats = [
   { value: "20+", label: "Anos de Experiência" },
-  { value: "15+", label: "Especialidades" },
+  { value: "15", label: "Especialidades" },
   { value: "1000+", label: "Pacientes Atendidos" },
 ];
 
@@ -33,7 +33,7 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p className="text-muted-foreground text-base leading-relaxed mb-12 font-light">
-              A Palato Odontologia está há quase duas décadas no mercado como uma renomada clínica odontológica em
+              A Palato Odontologia está há mais de duas décadas no mercado como uma renomada clínica odontológica em
               Goiânia. Nossa clínica, localizada no prestigiado Edifício Metropolitano, reflete nossa dedicação e
               compromisso com a excelência em serviços odontológicos.
             </p>
