@@ -23,7 +23,8 @@ const LaserSection = () => {
               <span className="italic text-gold-light">Odontológico</span>
             </h2>
             <p className="text-primary-foreground/70 mt-6 leading-relaxed font-light">
-              A Palato Odontologia inova mais uma vez e traz para Goiânia o Laser LiteTouch, a melhor tecnologia a laser do mundo.
+              A Palato Odontologia traz para Goiânia o Laser LiteTouch, uma tecnologia moderna que auxilia na realização
+              de procedimentos com mais precisão e conforto para o paciente.
             </p>
             <ul className="mt-10 space-y-4">
               {benefits.map((item) => (
@@ -35,7 +36,14 @@ const LaserSection = () => {
             </ul>
             <button
               type="button"
-              onClick={() => openExternal(getWhatsAppUrl(WA, "Olá! Gostaria de saber mais sobre o tratamento com Laser LiteTouch na Palato Odontologia."))}
+              onClick={() =>
+                openExternal(
+                  getWhatsAppUrl(
+                    WA,
+                    "Olá! Gostaria de saber mais sobre o tratamento com Laser LiteTouch na Palato Odontologia.",
+                  ),
+                )
+              }
               className="inline-block mt-10 px-10 py-4 gold-gradient text-primary-foreground font-semibold text-sm tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
             >
               Saiba Mais
