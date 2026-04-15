@@ -7,9 +7,11 @@ const specialties = [
   { title: "Buco-Maxilo e Ortognática", description: "Cirurgias corretivas faciais e procedimentos buco-maxilares." },
   { title: "Odontopediatria", description: "Cuidados odontológicos especializados para crianças." },
   { title: "Periodontia", description: "Tratamento de gengivas e tecidos de suporte dos dentes." },
-  { title: "Ortodontia e Ortopedia Facial", description: "Alinhamento dentário e correção de problemas esqueléticos." },
+  { title: "Ortodontia", description: "Alinhamento dentário com aparelhos fixos, móveis e alinhadores." },
+  { title: "Ortopedia Facial", description: "Correção de problemas esqueléticos e do crescimento facial." },
   { title: "Prótese", description: "Reabilitação oral com próteses fixas e removíveis." },
   { title: "Dentística", description: "Restaurações estéticas e funcionais dos dentes." },
+  { title: "Microscopia", description: "Procedimentos odontológicos de alta precisão com microscópio operatório." },
 ];
 
 const SpecialtiesSection = () => {
