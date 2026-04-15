@@ -7,8 +7,16 @@ const stats = [
 ];
 
 const highlights = [
-  { icon: Users, title: "Equipe Multidisciplinar", description: "Dentistas especializados em diferentes áreas da odontologia." },
-  { icon: Microscope, title: "Tecnologia de Ponta", description: "Equipamentos de última geração para diagnóstico e tratamento." },
+  {
+    icon: Users,
+    title: "Equipe Multidisciplinar",
+    description: "Dentistas especializados em diferentes áreas da odontologia.",
+  },
+  {
+    icon: Microscope,
+    title: "Tecnologia de Ponta",
+    description: "Equipamentos de última geração para diagnóstico e tratamento.",
+  },
   { icon: MapPin, title: "Localização Premium", description: "Edifício Metropolitano, área nobre de Goiânia." },
   { icon: Award, title: "Padrão de Excelência", description: "Comprometimento com qualidade em cada procedimento." },
 ];
@@ -25,14 +33,18 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <p className="text-muted-foreground text-base leading-relaxed mb-12 font-light">
-              A Palato Odontologia está há quase duas décadas no mercado como uma renomada clínica odontológica em Goiânia. Nossa nova clínica, localizada no prestigiado Edifício Metropolitano, reflete nossa dedicação e compromisso com a excelência em serviços odontológicos.
+              A Palato Odontologia está há quase duas décadas no mercado como uma renomada clínica odontológica em
+              Goiânia. Nossa clínica, localizada no prestigiado Edifício Metropolitano, reflete nossa dedicação e
+              compromisso com a excelência em serviços odontológicos.
             </p>
 
             <div className="grid grid-cols-3 gap-2 md:gap-4 mb-12">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center p-3 md:p-5 border border-border overflow-hidden">
                   <div className="text-xl md:text-3xl font-heading font-light text-primary">{stat.value}</div>
-                  <div className="text-[10px] md:text-xs text-muted-foreground mt-2 tracking-wide uppercase leading-tight">{stat.label}</div>
+                  <div className="text-[10px] md:text-xs text-muted-foreground mt-2 tracking-wide uppercase leading-tight">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
