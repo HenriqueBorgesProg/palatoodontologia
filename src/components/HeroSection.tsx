@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="inline-flex items-center gap-3 mb-10">
           <div className="w-12 h-px bg-gold" />
           <span className="text-xs font-medium tracking-[0.3em] uppercase text-gold-light">
-            Quase duas décadas de excelência
+            Mais de duas décadas de excelência
           </span>
           <div className="w-12 h-px bg-gold" />
         </div>
@@ -33,7 +33,9 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             type="button"
-            onClick={() => openExternal(getWhatsAppUrl(WA, "Olá! Gostaria de agendar uma avaliação na Palato Odontologia."))}
+            onClick={() =>
+              openExternal(getWhatsAppUrl(WA, "Olá! Gostaria de agendar uma avaliação na Palato Odontologia."))
+            }
             className="gold-gradient px-10 py-4 text-primary-foreground font-semibold text-sm tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
           >
             Agende sua Avaliação
