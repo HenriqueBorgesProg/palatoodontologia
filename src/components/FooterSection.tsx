@@ -5,7 +5,7 @@ const WA = "556299693125";
 
 const FooterSection = () => {
   return (
-    <footer id="contato" className="bg-foreground text-primary-foreground">
+    <footer id="contato" className="bg-background/90 backdrop-blur-xl text-foreground">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <span className="text-xs font-body font-semibold uppercase tracking-[0.3em] text-gold-light">

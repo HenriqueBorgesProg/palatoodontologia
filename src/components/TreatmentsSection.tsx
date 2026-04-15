@@ -14,12 +14,12 @@ const treatments = [
   { title: "Remoção de Lentes com Laser", description: "Feixe de luz para remover lentes de contato dentárias com alta precisão." },
   { title: "Remoção de Cárie com Laser", description: "Tratamento minimamente invasivo para remoção de cárie sem dor." },
   { title: "Implantes Dentários", description: "Implantes de alta qualidade para restaurar dentes perdidos com naturalidade." },
-  { title: "Profilaxia", description: "Limpeza profissional para prevenir cáries, gengivite e periodontite." },
+  
   { title: "Tratamento DTM", description: "Tratamento da articulação temporomandibular e seus distúrbios." },
   { title: "Tratamento Apneia", description: "Tratamento para apneia do sono e distúrbios respiratórios." },
   { title: "Tratamento com Laser", description: "Abordagem minimamente invasiva com tecnologia laser de ponta." },
   { title: "Gengivoplastia", description: "Remodelação gengival para um sorriso mais harmônico e equilibrado." },
-  { title: "Palato Beauty", description: "Procedimentos estéticos para um sorriso saudável e harmonioso." },
+  
   { title: "Prótese Dentária", description: "Soluções para restauração e substituição de dentes perdidos ou danificados." },
 ];
 
