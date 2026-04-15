@@ -5,13 +5,13 @@ const WA = "556299693125";
 
 const FooterSection = () => {
   return (
-    <footer id="contato" className="bg-background/90 backdrop-blur-xl text-foreground">
+    <footer id="contato" className="bg-background border-t border-border/50 text-foreground">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <span className="text-xs font-body font-semibold uppercase tracking-[0.3em] text-gold-light">
             Localização
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light text-primary-foreground leading-tight mt-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light text-foreground leading-tight mt-4">
             Encontre-nos
           </h2>
         </div>
@@ -23,21 +23,21 @@ const FooterSection = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-[350px] md:h-[400px] border border-primary-foreground/10"
+            className="w-full h-[350px] md:h-[400px] border border-border"
           />
         </div>
 
         <div className="grid md:grid-cols-3 gap-12">
           <div>
-            <img src="/images/logo.png" alt="Palato Odontologia" className="h-12 brightness-200 mb-6" />
-            <p className="text-primary-foreground/60 text-sm font-light leading-relaxed">
+            <img src="/images/logo.png" alt="Palato Odontologia" className="h-12 mb-6" />
+            <p className="text-muted-foreground text-sm font-light leading-relaxed">
               Mais de duas décadas transformando sorrisos em Goiânia com tecnologia de ponta e cuidado personalizado.
             </p>
           </div>
 
           <div className="space-y-5">
-            <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-primary-foreground mb-6">Contato</h3>
-            <div className="flex items-start gap-3 text-primary-foreground/70 text-sm">
+            <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-foreground mb-6">Contato</h3>
+            <div className="flex items-start gap-3 text-muted-foreground text-sm">
               <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-gold" />
               <span className="font-light">Av. Dep. Jamel Cecílio, 2690 - Jardim Goiás, Goiânia - GO</span>
             </div>
@@ -46,24 +46,24 @@ const FooterSection = () => {
               onClick={() =>
                 openExternal(getWhatsAppUrl(WA, "Olá! Gostaria de entrar em contato com a Palato Odontologia."))
               }
-              className="flex items-center gap-3 text-primary-foreground/70 text-sm hover:text-gold transition-colors"
+              className="flex items-center gap-3 text-muted-foreground text-sm hover:text-gold transition-colors"
             >
               <Phone className="w-4 h-4 flex-shrink-0 text-gold" />
               <span className="font-light">(62) 9 9969-3125</span>
             </button>
-            <div className="flex items-center gap-3 text-primary-foreground/70 text-sm">
+            <div className="flex items-center gap-3 text-muted-foreground text-sm">
               <Clock className="w-4 h-4 flex-shrink-0 text-gold" />
               <span className="font-light">Seg - Sex: 8h às 18h</span>
             </div>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-primary-foreground mb-6">Links</h3>
+            <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-foreground mb-6">Links</h3>
             {["Sobre", "Tratamentos", "Especialidades", "Contato"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="block text-primary-foreground/70 text-sm font-light hover:text-gold transition-colors"
+                className="block text-muted-foreground text-sm font-light hover:text-gold transition-colors"
               >
                 {item}
               </a>
@@ -71,7 +71,7 @@ const FooterSection = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-16 pt-8 text-center text-primary-foreground/40 text-xs font-light tracking-wider">
+        <div className="border-t border-border mt-16 pt-8 text-center text-muted-foreground/60 text-xs font-light tracking-wider">
           © {new Date().getFullYear()} Palato Odontologia. Todos os direitos reservados.
         </div>
       </div>
