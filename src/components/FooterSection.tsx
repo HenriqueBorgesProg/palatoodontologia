@@ -8,8 +8,12 @@ const FooterSection = () => {
     <footer id="contato" className="bg-foreground text-primary-foreground">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <span className="text-xs font-body font-semibold uppercase tracking-[0.3em] text-gold-light">Localização</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light text-primary-foreground leading-tight mt-4">Encontre-nos</h2>
+          <span className="text-xs font-body font-semibold uppercase tracking-[0.3em] text-gold-light">
+            Localização
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light text-primary-foreground leading-tight mt-4">
+            Encontre-nos
+          </h2>
         </div>
 
         <div className="w-full mb-16">
@@ -27,7 +31,7 @@ const FooterSection = () => {
           <div>
             <img src="/images/logo.png" alt="Palato Odontologia" className="h-12 brightness-200 mb-6" />
             <p className="text-primary-foreground/60 text-sm font-light leading-relaxed">
-              Quase duas décadas transformando sorrisos em Goiânia com tecnologia de ponta e cuidado personalizado.
+              Mais de duas décadas transformando sorrisos em Goiânia com tecnologia de ponta e cuidado personalizado.
             </p>
           </div>
 
@@ -39,7 +43,9 @@ const FooterSection = () => {
             </div>
             <button
               type="button"
-              onClick={() => openExternal(getWhatsAppUrl(WA, "Olá! Gostaria de entrar em contato com a Palato Odontologia."))}
+              onClick={() =>
+                openExternal(getWhatsAppUrl(WA, "Olá! Gostaria de entrar em contato com a Palato Odontologia."))
+              }
               className="flex items-center gap-3 text-primary-foreground/70 text-sm hover:text-gold transition-colors"
             >
               <Phone className="w-4 h-4 flex-shrink-0 text-gold" />
