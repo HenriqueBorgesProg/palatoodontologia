@@ -2,7 +2,7 @@ import { Users, Microscope, Award, MapPin } from "lucide-react";
 
 const stats = [
   { value: "20+", label: "Anos de Experiência" },
-  { value: "15", label: "Especialidades" },
+  { value: "8+", label: "Especialidades" },
   { value: "1000+", label: "Pacientes Atendidos" },
 ];
 
