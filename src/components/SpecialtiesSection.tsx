@@ -1,20 +1,20 @@
 import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
-import specialtyGeneral from "@/assets/specialty-general.jpg";
-import specialtyOrthodontics from "@/assets/specialty-orthodontics.jpg";
-import specialtyMicroscope from "@/assets/specialty-microscope.jpg";
-import specialtyProsthetics from "@/assets/specialty-prosthetics.jpg";
+import specialtySmile1 from "@/assets/specialty-smile-1.jpg";
+import specialtySmile2 from "@/assets/specialty-smile-2.jpg";
+import specialtySmile3 from "@/assets/specialty-smile-3.jpg";
+import microscopeProcedure from "@/assets/microscope-procedure.jpg";
 
 const WA = "556299693125";
 
 const specialties = [
-  { title: "Buco-Maxilo e Ortognática", description: "Cirurgias corretivas faciais e procedimentos buco-maxilares.", image: specialtyGeneral },
-  { title: "Odontopediatria", description: "Cuidados odontológicos especializados para crianças.", image: specialtyGeneral },
-  { title: "Periodontia", description: "Tratamento de gengivas e tecidos de suporte dos dentes.", image: specialtyGeneral },
-  { title: "Ortodontia", description: "Alinhamento dentário com aparelhos fixos, móveis e alinhadores.", image: specialtyOrthodontics },
-  { title: "Ortopedia Facial", description: "Correção de problemas esqueléticos e do crescimento facial.", image: specialtyGeneral },
-  { title: "Prótese", description: "Reabilitação oral com próteses fixas e removíveis.", image: specialtyProsthetics },
-  { title: "Dentística", description: "Restaurações estéticas e funcionais dos dentes.", image: specialtyProsthetics },
-  { title: "Microscopia", description: "Procedimentos odontológicos de alta precisão com microscópio operatório.", image: specialtyMicroscope },
+  { title: "Buco-Maxilo e Ortognática", description: "Cirurgias corretivas faciais e procedimentos buco-maxilares.", image: specialtySmile1 },
+  { title: "Odontopediatria", description: "Cuidados odontológicos especializados para crianças.", image: specialtySmile2 },
+  { title: "Periodontia", description: "Tratamento de gengivas e tecidos de suporte dos dentes.", image: specialtySmile3 },
+  { title: "Ortodontia", description: "Alinhamento dentário com aparelhos fixos, móveis e alinhadores.", image: specialtySmile1 },
+  { title: "Ortopedia Facial", description: "Correção de problemas esqueléticos e do crescimento facial.", image: specialtySmile2 },
+  { title: "Prótese", description: "Reabilitação oral com próteses fixas e removíveis.", image: specialtySmile3 },
+  { title: "Dentística", description: "Restaurações estéticas e funcionais dos dentes.", image: microscopeProcedure },
+  { title: "Microscopia", description: "Procedimentos odontológicos de alta precisão com microscópio operatório.", image: microscopeProcedure },
 ];
 
 const SpecialtiesSection = () => {
@@ -43,7 +43,7 @@ const SpecialtiesSection = () => {
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-foreground/50 group-hover:bg-foreground/60 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-foreground/60 group-hover:bg-foreground/70 transition-colors duration-300" />
               <div className="relative z-10 h-full flex flex-col justify-end p-6">
                 <h3 className="text-lg font-bold text-primary-foreground leading-snug">
                   {s.title}
