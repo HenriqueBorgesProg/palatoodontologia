@@ -23,7 +23,7 @@ const highlights = [
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-24 md:py-36 bg-background">
+    <section id="sobre" className="py-28 md:py-40 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <span className="section-label">Sobre a Palato</span>
@@ -40,8 +40,8 @@ const AboutSection = () => {
 
             <div className="grid grid-cols-3 gap-2 md:gap-4 mb-12">
               {stats.map((stat) => (
-                <div key={stat.label} className="text-center p-3 md:p-5 border border-border overflow-hidden">
-                  <div className="text-xl md:text-3xl font-heading font-light text-primary">{stat.value}</div>
+                <div key={stat.label} className="text-center p-3 md:p-5 border border-border rounded-lg overflow-hidden">
+                  <div className="text-xl md:text-3xl font-bold text-primary">{stat.value}</div>
                   <div className="text-[10px] md:text-xs text-muted-foreground mt-2 tracking-wide uppercase leading-tight">
                     {stat.label}
                   </div>
@@ -51,11 +51,11 @@ const AboutSection = () => {
 
             <div className="space-y-1">
               {highlights.map((item) => (
-                <div key={item.title} className="flex items-start gap-4 p-4 hover:bg-secondary/50 transition-colors">
+                <div key={item.title} className="flex items-start gap-4 p-4 rounded-lg hover:bg-secondary/50 transition-colors">
                   <item.icon className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-medium text-foreground text-sm">{item.title}</h3>
-                    <p className="text-xs text-muted-foreground mt-1">{item.description}</p>
+                    <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
+                    <p className="text-xs text-muted-foreground mt-1 font-light">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -63,13 +63,13 @@ const AboutSection = () => {
           </div>
 
           <div className="lg:sticky lg:top-28">
-            <div className="aspect-video w-full">
+            <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg">
               <iframe
                 src="https://www.youtube.com/embed/Vth3vuHQyO0"
                 title="Palato Odontologia - Apresentação"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="w-full h-full border border-border"
+                className="w-full h-full"
               />
             </div>
           </div>

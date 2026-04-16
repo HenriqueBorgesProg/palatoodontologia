@@ -12,15 +12,15 @@ const benefits = [
 
 const LaserSection = () => {
   return (
-    <section className="py-24 md:py-36 bg-primary text-primary-foreground">
+    <section className="py-28 md:py-40 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-xs font-body font-semibold uppercase tracking-[0.3em] text-gold-light">Inovação</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light leading-tight mt-4 text-primary-foreground">
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-light">Inovação</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-4 text-primary-foreground tracking-tight">
               Laser LiteTouch
               <br />
-              <span className="italic text-gold-light">Odontológico</span>
+              <span className="font-light text-gold-light">Odontológico</span>
             </h2>
             <p className="text-primary-foreground/70 mt-6 leading-relaxed font-light">
               A Palato Odontologia traz para Goiânia o Laser LiteTouch, uma tecnologia moderna que auxilia na realização
@@ -44,13 +44,13 @@ const LaserSection = () => {
                   ),
                 )
               }
-              className="inline-block mt-10 px-10 py-4 gold-gradient text-primary-foreground font-semibold text-sm tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
+              className="inline-block mt-10 px-10 py-4 gold-gradient text-primary-foreground font-bold text-sm tracking-[0.15em] uppercase rounded-lg hover:opacity-90 transition-all hover:shadow-lg hover:shadow-accent/20"
             >
               Saiba Mais
             </button>
           </div>
 
-          <div className="border border-primary-foreground/10 overflow-hidden">
+          <div className="border border-primary-foreground/10 overflow-hidden rounded-xl">
             <img
               src="/images/laser-litetouch.jpeg"
               alt="Laser LiteTouch"

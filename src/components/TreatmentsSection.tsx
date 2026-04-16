@@ -62,7 +62,7 @@ const TreatmentsSection = () => {
   );
 
   return (
-    <section id="tratamentos" className="py-24 md:py-36 bg-secondary/50">
+    <section id="tratamentos" className="py-28 md:py-40 section-alt-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <span className="section-label">Nossos Tratamentos</span>
@@ -80,14 +80,14 @@ const TreatmentsSection = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prev}
-            className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-background border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-background border border-border rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors shadow-sm"
             aria-label="Anterior"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={next}
-            className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-background border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-background border border-border rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors shadow-sm"
             aria-label="Próximo"
           >
             <ChevronRight className="w-5 h-5" />
@@ -110,7 +110,7 @@ const TreatmentsSection = () => {
                 className="group bg-background p-8 flex flex-col justify-between min-h-[220px] hover:bg-card transition-colors text-left"
               >
                 <div>
-                  <h3 className="font-heading text-xl font-light text-foreground group-hover:text-primary transition-colors leading-tight">
+                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors leading-tight">
                     {t.title}
                   </h3>
                   <p className="text-xs text-muted-foreground mt-3 leading-relaxed font-light">

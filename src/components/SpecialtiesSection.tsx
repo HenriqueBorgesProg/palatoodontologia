@@ -16,7 +16,7 @@ const specialties = [
 
 const SpecialtiesSection = () => {
   return (
-    <section id="especialidades" className="py-24 md:py-36 bg-background">
+    <section id="especialidades" className="py-28 md:py-40 section-alt-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <span className="section-label">Áreas de Atuação</span>
@@ -26,23 +26,23 @@ const SpecialtiesSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {specialties.map((s, i) => (
             <button
               key={s.title}
               type="button"
               onClick={() => openExternal(getWhatsAppUrl(WA, `Olá! Gostaria de saber mais sobre ${s.title} na Palato Odontologia.`))}
-              className="group glass-card p-8 hover:border-primary/30 transition-all duration-300 text-left"
+              className="group bg-card rounded-xl p-8 border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left"
             >
-              <span className="text-xs text-muted-foreground font-mono">0{i + 1}</span>
-              <h3 className="font-heading text-xl font-light text-foreground mt-4 group-hover:text-primary transition-colors">
+              <span className="text-xs text-muted-foreground font-mono tracking-wider">0{i + 1}</span>
+              <h3 className="text-lg font-semibold text-foreground mt-5 group-hover:text-primary transition-colors leading-snug">
                 {s.title}
               </h3>
               <p className="text-sm text-muted-foreground mt-3 font-light leading-relaxed">
                 {s.description}
               </p>
               <div className="flex items-center gap-2 mt-6 text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="text-xs font-medium tracking-wider uppercase">Saiba Mais</span>
+                <span className="text-xs font-semibold tracking-wider uppercase">Saiba Mais</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
             </button>

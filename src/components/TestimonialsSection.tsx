@@ -26,7 +26,7 @@ const TestimonialsSection = () => {
   const active = testimonials[activeIndex];
 
   return (
-    <section className="py-24 md:py-36 bg-background">
+    <section className="py-28 md:py-40 section-alt-bg">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-14">
           <span className="section-label">Depoimentos</span>
