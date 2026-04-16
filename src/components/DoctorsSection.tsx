@@ -3,16 +3,16 @@ import draJuliana from "@/assets/dra-juliana-clean.jpg";
 
 const doctors = [
   {
-    name: "Dra. Priscilla Santos",
-    specialty: "Especialista em Prótese Dentária",
-    cro: "CROGO 11318",
-    image: draPriscilla,
-  },
-  {
     name: "Dra. Juliana do Nascimento",
     specialty: "Especialista em Endodontia e Dentística Restauradora",
     cro: "CROGO 6035",
     image: draJuliana,
+  },
+  {
+    name: "Dra. Priscilla Santos",
+    specialty: "Especialista em Prótese Dentária",
+    cro: "CROGO 11318",
+    image: draPriscilla,
   },
 ];
 
@@ -23,9 +23,7 @@ const DoctorsSection = () => {
         <div className="text-center mb-20">
           <span className="section-label">Sócias Fundadoras</span>
           <h2 className="section-title mt-4">Especialistas Responsáveis</h2>
-          <p className="section-subtitle mx-auto mt-5">
-            Dedicação, formação de excelência e paixão pela odontologia.
-          </p>
+          <p className="section-subtitle mx-auto mt-5">Dedicação, formação de excelência e paixão pela odontologia.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-12 max-w-3xl mx-auto">
@@ -44,12 +42,8 @@ const DoctorsSection = () => {
               </div>
               <div className="p-10 text-center">
                 <h3 className="text-xl font-bold text-foreground tracking-tight">{doc.name}</h3>
-                <p className="text-sm text-muted-foreground mt-3 font-light leading-relaxed">
-                  {doc.specialty}
-                </p>
-                <p className="text-[11px] text-muted-foreground/50 mt-2 tracking-widest uppercase">
-                  {doc.cro}
-                </p>
+                <p className="text-sm text-muted-foreground mt-3 font-light leading-relaxed">{doc.specialty}</p>
+                <p className="text-[11px] text-muted-foreground/50 mt-2 tracking-widest uppercase">{doc.cro}</p>
               </div>
             </div>
           ))}
