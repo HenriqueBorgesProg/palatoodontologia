@@ -1,16 +1,53 @@
+import { useState, useEffect, useCallback } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
+import heroClinicView from "@/assets/hero-clinic-view.jpg";
+import heroClinicInterior from "@/assets/hero-clinic-interior.jpg";
+import heroProcedure from "@/assets/hero-procedure.jpg";
 import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
 
 const WA = "556299693125";
+const INTERVAL = 6000;
+
+const heroImages = [
+  heroBg,              // Secretária / acolhimento
+  heroClinicView,      // Consultório com vista / sofisticação
+  heroClinicInterior,  // Ambiente interno / detalhe premium
+  heroProcedure,       // Doutora em atendimento / excelência
+];
 
 const HeroSection = () => {
+  const [current, setCurrent] = useState(0);
+
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % heroImages.length);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(next, INTERVAL);
+    return () => clearInterval(timer);
+  }, [next]);
+
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={heroBg} alt="Clínica Palato" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-foreground/70" />
-      </div>
+      {/* Slider images */}
+      {heroImages.map((src, i) => (
+        <div
+          key={i}
+          className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+          style={{ opacity: i === current ? 1 : 0 }}
+        >
+          <img
+            src={src}
+            alt={`Palato Odontologia - Ambiente ${i + 1}`}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ))}
 
+      {/* Overlay escuro */}
+      <div className="absolute inset-0 bg-foreground/60" />
+
+      {/* Texto fixo */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
         <div className="inline-flex items-center gap-3 mb-12">
           <div className="w-16 h-px bg-gold" />
@@ -51,8 +88,18 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2">
-        <div className="w-px h-20 bg-gradient-to-b from-transparent via-gold to-transparent opacity-30" />
+      {/* Indicadores */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {heroImages.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-2 h-2 rounded-full transition-all duration-500 ${
+              i === current ? "bg-gold w-8" : "bg-primary-foreground/30"
+            }`}
+            aria-label={`Imagem ${i + 1}`}
+          />
+        ))}
       </div>
     </section>
   );
