@@ -11,7 +11,7 @@ const FooterSection = () => {
           <span className="text-xs font-body font-semibold uppercase tracking-[0.3em] text-gold-light">
             Localização
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light text-primary-foreground leading-tight mt-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight tracking-tight mt-4">
             Encontre-nos
           </h2>
         </div>
