@@ -9,10 +9,10 @@ const WA = "556299693125";
 const INTERVAL = 6000;
 
 const heroImages = [
-  heroBg,              // Secretária / acolhimento
-  heroClinicView,      // Consultório com vista / sofisticação
-  heroClinicInterior,  // Ambiente interno / detalhe premium
-  heroProcedure,       // Doutora em atendimento / excelência
+  heroBg, // Secretária / acolhimento
+  heroClinicView, // Consultório com vista / sofisticação
+  heroClinicInterior, // Ambiente interno / detalhe premium
+  heroProcedure, // Doutora em atendimento / excelência
 ];
 
 const HeroSection = () => {
@@ -36,11 +36,7 @@ const HeroSection = () => {
           className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
           style={{ opacity: i === current ? 1 : 0 }}
         >
-          <img
-            src={src}
-            alt={`Palato Odontologia - Ambiente ${i + 1}`}
-            className="w-full h-full object-cover"
-          />
+          <img src={src} alt={`Palato Odontologia - Ambiente ${i + 1}`} className="w-full h-full object-cover" />
         </div>
       ))}
 
@@ -58,11 +54,11 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-primary-foreground leading-[0.85] mb-10 tracking-tighter">
-          Transformamos
+          Seu sorriso
           <br />
-          sorrisos
+          mais bonito
           <br />
-          <span className="gold-text">e histórias</span>
+          <span className="gold-text">começa aqui</span>
         </h1>
 
         <p className="text-lg md:text-xl text-primary-foreground/60 mb-16 max-w-md mx-auto font-light leading-relaxed">
