@@ -23,25 +23,25 @@ const highlights = [
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-28 md:py-40 bg-background">
+    <section id="sobre" className="py-32 md:py-48 section-alt-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <span className="section-label">Sobre a Palato</span>
           <h2 className="section-title mt-4">Tradição e Inovação</h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-20 items-start">
           <div>
-            <p className="text-muted-foreground text-base leading-relaxed mb-12 font-light">
+            <p className="text-muted-foreground text-base leading-relaxed mb-14 font-light">
               A Palato Odontologia está há mais de duas décadas no mercado como uma renomada clínica odontológica em
               Goiânia. Nossa clínica, localizada no prestigiado Edifício Metropolitano, reflete nossa dedicação e
               compromisso com a excelência em serviços odontológicos.
             </p>
 
-            <div className="grid grid-cols-3 gap-2 md:gap-4 mb-12">
+            <div className="grid grid-cols-3 gap-2 md:gap-5 mb-14">
               {stats.map((stat) => (
-                <div key={stat.label} className="text-center p-3 md:p-5 border border-border rounded-lg overflow-hidden">
-                  <div className="text-xl md:text-3xl font-bold text-primary">{stat.value}</div>
+                <div key={stat.label} className="text-center p-4 md:p-6 border border-border rounded-xl bg-card">
+                  <div className="text-2xl md:text-3xl font-bold text-primary">{stat.value}</div>
                   <div className="text-[10px] md:text-xs text-muted-foreground mt-2 tracking-wide uppercase leading-tight">
                     {stat.label}
                   </div>
@@ -49,9 +49,9 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <div className="space-y-1">
+            <div className="space-y-2">
               {highlights.map((item) => (
-                <div key={item.title} className="flex items-start gap-4 p-4 rounded-lg hover:bg-secondary/50 transition-colors">
+                <div key={item.title} className="flex items-start gap-4 p-5 rounded-xl hover:bg-card transition-colors">
                   <item.icon className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
@@ -63,7 +63,7 @@ const AboutSection = () => {
           </div>
 
           <div className="lg:sticky lg:top-28">
-            <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg">
+            <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-xl">
               <iframe
                 src="https://www.youtube.com/embed/Vth3vuHQyO0"
                 title="Palato Odontologia - Apresentação"

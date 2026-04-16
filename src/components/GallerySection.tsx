@@ -9,14 +9,14 @@ const images = [
 
 const GallerySection = () => {
   return (
-    <section className="py-28 md:py-40 bg-background">
+    <section className="py-32 md:py-48 section-alt-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
           <span className="section-label">Nossa Estrutura</span>
           <h2 className="section-title mt-4">Galeria</h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 rounded-xl overflow-hidden">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 rounded-2xl overflow-hidden">
           {images.map((src, i) => (
             <div key={i} className="aspect-square overflow-hidden group cursor-pointer">
               <img
