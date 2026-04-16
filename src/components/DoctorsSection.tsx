@@ -1,16 +1,16 @@
-import doutorasJuntas from "@/assets/doutoras-juntas.jpg";
-import doutorasMicroscopia from "@/assets/doutora-microscopia.jpg";
+import draPriscilla from "@/assets/dra-priscilla-clean.jpg";
+import draJuliana from "@/assets/dra-juliana-clean.jpg";
 
 const doctors = [
   {
     name: "Dra. Priscilla Santos",
     specialty: "Especialista em Prótese Dentária",
-    image: doutorasJuntas,
+    image: draPriscilla,
   },
   {
     name: "Dra. Juliana do Nascimento",
     specialty: "Especialista em Endodontia e Dentística Restauradora (Estética)",
-    image: doutorasMicroscopia,
+    image: draJuliana,
   },
 ];
 
@@ -19,8 +19,8 @@ const DoctorsSection = () => {
     <section className="py-28 md:py-40 section-alt-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
-          <span className="section-label">Corpo Clínico</span>
-          <h2 className="section-title mt-4">Nossas Profissionais</h2>
+          <span className="section-label">Sócias Fundadoras</span>
+          <h2 className="section-title mt-4">Especialistas Responsáveis</h2>
           <p className="section-subtitle mx-auto mt-5">
             Dedicação, formação de excelência e paixão pela odontologia.
           </p>
@@ -32,7 +32,7 @@ const DoctorsSection = () => {
               key={doc.name}
               className="group bg-card rounded-xl overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-300"
             >
-              <div className="aspect-[3/4] overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden bg-muted">
                 <img
                   src={doc.image}
                   alt={doc.name}
