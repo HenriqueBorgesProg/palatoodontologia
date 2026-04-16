@@ -20,14 +20,14 @@ const HeroSection = () => {
           <div className="w-12 h-px bg-gold" />
         </div>
 
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-primary-foreground leading-[0.9] mb-8 tracking-tight">
-          Odontologia de
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-primary-foreground leading-[0.9] mb-8 tracking-tight">
+          Transformamos sorrisos
           <br />
-          <span className="gold-text">Alto Padrão</span>
+          <span className="gold-text">e histórias</span>
         </h1>
 
         <p className="text-lg md:text-xl text-primary-foreground/70 mb-14 max-w-xl mx-auto font-light leading-relaxed">
-          Tecnologia de ponta e cuidado personalizado em Goiânia
+          Tecnologia, estética e cuidado em cada detalhe
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
