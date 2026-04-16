@@ -13,9 +13,9 @@ const benefits = [
 
 const LaserSection = () => {
   return (
-    <section className="py-28 md:py-40 bg-primary text-primary-foreground">
+    <section className="py-32 md:py-48 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-light">Inovação</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-4 text-primary-foreground tracking-tight">
@@ -23,11 +23,11 @@ const LaserSection = () => {
               <br />
               <span className="font-light text-gold-light">Odontológico</span>
             </h2>
-            <p className="text-primary-foreground/70 mt-6 leading-relaxed font-light">
+            <p className="text-primary-foreground/70 mt-8 leading-relaxed font-light">
               A Palato Odontologia traz para Goiânia o Laser LiteTouch, uma tecnologia moderna que auxilia na realização
               de procedimentos com mais precisão e conforto para o paciente.
             </p>
-            <ul className="mt-10 space-y-4">
+            <ul className="mt-12 space-y-5">
               {benefits.map((item) => (
                 <li key={item} className="flex items-center gap-4">
                   <div className="w-1.5 h-1.5 bg-gold flex-shrink-0" />
@@ -45,13 +45,13 @@ const LaserSection = () => {
                   ),
                 )
               }
-              className="inline-block mt-10 px-10 py-4 gold-gradient text-primary-foreground font-bold text-sm tracking-[0.15em] uppercase rounded-lg hover:opacity-90 transition-all hover:shadow-lg hover:shadow-accent/20"
+              className="inline-block mt-12 px-12 py-5 gold-gradient text-primary-foreground font-bold text-sm tracking-[0.15em] uppercase rounded-lg hover:opacity-90 transition-all hover:shadow-2xl hover:shadow-accent/30"
             >
               Saiba Mais
             </button>
           </div>
 
-          <div className="border border-primary-foreground/10 overflow-hidden rounded-xl">
+          <div className="border border-primary-foreground/10 overflow-hidden rounded-2xl shadow-xl">
             <img
               src={laserLitetouch}
               alt="Equipamento Laser LiteTouch odontológico"
