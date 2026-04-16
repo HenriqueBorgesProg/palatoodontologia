@@ -5,11 +5,13 @@ const doctors = [
   {
     name: "Dra. Priscilla Santos",
     specialty: "Especialista em Prótese Dentária",
+    cro: "CROGO 11318",
     image: draPriscilla,
   },
   {
     name: "Dra. Juliana do Nascimento",
-    specialty: "Especialista em Endodontia e Dentística Restauradora (Estética)",
+    specialty: "Especialista em Endodontia e Dentística Restauradora",
+    cro: "CROGO 6035",
     image: draJuliana,
   },
 ];
@@ -44,6 +46,9 @@ const DoctorsSection = () => {
                 <h3 className="text-xl font-bold text-foreground">{doc.name}</h3>
                 <p className="text-sm text-muted-foreground mt-2 font-light leading-relaxed">
                   {doc.specialty}
+                </p>
+                <p className="text-xs text-muted-foreground/60 mt-1 tracking-wide">
+                  {doc.cro}
                 </p>
               </div>
             </div>
