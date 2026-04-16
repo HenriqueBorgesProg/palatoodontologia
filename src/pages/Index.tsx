@@ -5,6 +5,7 @@ import DoctorsSection from "@/components/DoctorsSection";
 import AboutSection from "@/components/AboutSection";
 import TreatmentsSection from "@/components/TreatmentsSection";
 import SpecialtiesSection from "@/components/SpecialtiesSection";
+import ResultsSection from "@/components/ResultsSection";
 import LaserSection from "@/components/LaserSection";
 import GallerySection from "@/components/GallerySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
