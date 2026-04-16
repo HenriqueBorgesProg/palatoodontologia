@@ -62,7 +62,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-primary-foreground/60 mb-16 max-w-md mx-auto font-light leading-relaxed">
-          Tecnologia, estética e cuidado em cada detalhe
+          Recupere sua autoestima com resultados naturais
         </p>
 
         <div className="flex flex-col sm:flex-row gap-5 justify-center">
