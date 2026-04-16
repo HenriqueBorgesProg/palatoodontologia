@@ -73,7 +73,7 @@ const HeroSection = () => {
             }
             className="gold-gradient px-14 py-5 text-primary-foreground font-bold text-sm tracking-[0.2em] uppercase rounded-lg hover:opacity-90 transition-all hover:shadow-2xl hover:shadow-accent/30 hover:scale-[1.02]"
           >
-            Agende sua Avaliação
+            Quero meu novo sorriso
           </button>
           <a
             href="#sobre"
