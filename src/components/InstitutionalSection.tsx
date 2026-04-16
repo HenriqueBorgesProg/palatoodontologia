@@ -1,4 +1,4 @@
-import doutorasJuntas from "@/assets/doutoras-juntas-v2.jpg";
+import doutorasJuntas from "@/assets/doutoras-juntas.jpg";
 
 const InstitutionalSection = () => {
   return (
