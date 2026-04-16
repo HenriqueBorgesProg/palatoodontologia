@@ -1,3 +1,4 @@
+import doutorasAtendimento from "@/assets/doutoras-atendimento.jpg";
 import { getWhatsAppUrl, openExternal } from "@/lib/externalNavigation";
 
 const WA = "556299693125";
@@ -52,8 +53,8 @@ const LaserSection = () => {
 
           <div className="border border-primary-foreground/10 overflow-hidden rounded-xl">
             <img
-              src="/images/laser-litetouch.jpeg"
-              alt="Laser LiteTouch"
+              src={doutorasAtendimento}
+              alt="Doutoras em atendimento com tecnologia de ponta"
               className="w-full h-full object-cover"
               loading="lazy"
             />
